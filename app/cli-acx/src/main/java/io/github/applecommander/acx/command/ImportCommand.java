@@ -350,7 +350,8 @@ public class ImportCommand extends ReadWriteDiskCommandOptions {
         private Optional<String> fileName;
         
         @Option(names = { "--aux", "--auxtype" }, description = "Aux. Type. "
-                + "(For a filesystem that supports aux type.)")
+                + "(For a filesystem that supports aux type.)",
+                converter = IntegerTypeConverter.class)
         private Optional<Integer> auxType;
     }
 }
